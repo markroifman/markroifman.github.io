@@ -40,10 +40,9 @@ function func(){
 x=document.getElementById("a_znach").value;
 n=(x-x%10)/10+(x%10)*100
 document.getElementById("a").innerHTML ="<h1>"+"2.25= "+ n+"</h1>";
- n=(x-x%100)/100+(x%100*10)
+n=(x-x%100)/100+(x%100*10)
 document.getElementById("b").innerHTML ="<h1>"+"2.27= "+ n+"</h1>";
-x=((y-y%100)/10+y%10)
-n=10*x+(y%100-y%10)/10
+n=(n%100-n%10)*100+((n-n%100*10)+n%10)
 document.getElementById("c").innerHTML ="<h1>"+"2.29= "+ n+"</h1>";
 x=((y-y%100)/10+y%10)
 n=(y%100-y%10)*10+x
