@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>canvasExample</title>
+        <meta charset='utf-8' />
+        <script>
+function myFunction(){
+  var example = document.getElementById("example"),
+			    ctx     = example.getContext('2d');
+			    
+			    ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);	
+ctx.stroke();
+
+  ctx.beginPath();
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+
+
+
+
+
+
+ctx.rect(330, 200, 200, 20);
+ctx.fillStyle = 'green';
+ctx.fill();
+
+
+}
+</script>
+     
+	</head>
+<body onload="myFunction()">
+<canvas height='640' width='480' id='example'>Обновите браузер</canvas>
+	</body>
+</html>
