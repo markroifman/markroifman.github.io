@@ -55,7 +55,10 @@ ctx.lineTo(300, 0);
 ctx.moveTo(300, 230);
 ctx.lineTo(0, 230);
 ctx.stroke();
-ctx.fillRect(0, 0, 300, 230);
+ctx.rect(0, 0, 300, 230);
+ctx.fillStyle = 'black';
+ctx.fill();
+
 }
 		function er2(){
 	var canvas = document.getElementById('example');
