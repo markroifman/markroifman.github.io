@@ -1,3 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title>canvasExample</title>
+        <meta charset='utf-8' />
+        		<script>
+		function er1(){
+var canvas = document.getElementById('example1');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+
+ctx.moveTo(300, 230);
+ctx.lineTo(300, 0);
+ctx.moveTo(300, 230);
+ctx.lineTo(0, 230);
+ctx.stroke();
+ctx.fillRect(0, 0, 300, 230);
+}
+		function er2(){
+	var canvas = document.getElementById('example2');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(0, 225, 640, 35);
+ctx.fillStyle = 'red';
+ctx.fill();
+
+}
+		function er3(){
+	var canvas = document.getElementById('example3');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330, 200, 10, 250);
+ctx.fillStyle = 'black';
+ctx.fill();
+
+}
+		function er4(){
+	var canvas = document.getElementById('example4');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330, 200, 200, 20);
+ctx.fillStyle = 'red';
+ctx.fill();
+
+}
+    function er5(){
+	var canvas = document.getElementById('example5');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330, 250, 300, 240);
+ctx.fillStyle = 'black';
+ctx.fill();
+}
+    function er6(){
+	var canvas = document.getElementById('example6');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(340, 0, 300, 230);
+ctx.fillStyle = 'red';
+ctx.fill();
 ctx.rect(340, 255, 300, 225);
 ctx.fillStyle = 'red';
 ctx.fill();
@@ -62,4 +151,3 @@ ctx.fill();
 	<canvas width='640' height='480' id='example8'>Обновите браузер</canvas>
 	</body>
 </html>
-
