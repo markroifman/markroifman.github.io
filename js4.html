@@ -61,7 +61,7 @@ ctx.stroke();
 x=Number(document.getElementById("x_znach").value); 
 y=Number(document.getElementById("y_znach").value); 
 
-if ((y<=0 &&  y>=x*x-60)||(x >=0 && y*y+x*x<=1600)||(y*y+x*x<=1600 && y<=x*x-60)) {
+if ((y<=0 &&  y>=x*x-60)||(x >=0 && y*y+x*x<=1600)||(y*y+x*x<=1600 && y>=x*x-60)) {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
