@@ -44,22 +44,24 @@ ctx.closePath();
 function er1(){ 
   var canvas = document.getElementById('example');
 var ctx=canvas.getContext("2d");drawpoint();
-for(var i=-20;i<20;i+=0.01){
-    ctx.fillStyle="red"; // цвет квадратической параболы
-    ctx.fillRect(320+i*10,300-12*Math.pow(i,2),1,1);
-}
+
 ctx.moveTo(320, 0); 
 ctx.lineTo(320, 480); 
 ctx.moveTo(0, 240); 
 ctx.lineTo(640, 240); 
 
 ctx.arc(320, 240, 40, 0, 2 * Math.PI)
+ctx.moveTo(320, 0); 
+for(var x=-320;x<320;x+=0.01){
+    ctx.fillStyle="red"; // цвет квадратической параболы
+    ctx.arc(320+x, 240-(1/7*x*x-60), 0.3, 0, 2 * Math.PI);
+}
 ctx.stroke(); 
 
 x=Number(document.getElementById("x_znach").value); 
 y=Number(document.getElementById("y_znach").value); 
 
-if ((x >=0 && y*y+x*x<=1600)) {
+if ((y<=0 &&  y>=x*x-60)||(x >=0 && y*y+x*x<=1600)||(y*y+x*x<=1600 && y<=x*x-60)) {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
