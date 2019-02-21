@@ -53,7 +53,6 @@ ctx.moveTo(0, 240);
 ctx.lineTo(640, 240); 
 ctx.arc(320, 240, R, 0, 2 * Math.PI)
 ctx.moveTo(320, 240); 
-
 ctx.moveTo(320-Math.sqrt(y)/2,240-Math.sqrt(y)/2)
 ctx.lineTo(320+Math.sqrt(y)/2,240-Math.sqrt(y)/2)
 ctx.lineTo(320+Math.sqrt(y)/2,240+Math.sqrt(y)/2)
@@ -85,26 +84,28 @@ ctx.moveTo(0, 240);
 ctx.lineTo(640, 240); 
 ctx.arc(320, 240, R, 0, 2 * Math.PI)
 ctx.moveTo(320, 240); 
-
 ctx.moveTo(320,240-h*2/3)
 ctx.lineTo(320-a/2,240+h*1/3)
 ctx.lineTo(320+a/2,240+h*1/3)
 ctx.lineTo(320,240-h*2/3)
 ctx.stroke(); 
-if (2*R>a) {
-document.getElementById("otvet").innerHTML = "квадрат в круге";
+if (R>h*2/3) {
+document.getElementById("otvet").innerHTML = "треугольник в круге";
+} else {if (R<h*1/3) {
+document.getElementById("otvet").innerHTML = "круг в треугольник"; 
 } else {
-document.getElementById("otvet").innerHTML = "круг в квадрате"; 
+document.getElementById("otvet").innerHTML = "пересечение"; 
 }
 } 
+}
 </script> 
 </head> 
 <body> 
 x=<input type="text" value="0" id="x_znach"> 
 y=<input type="text" value="0" id="y_znach"> 
 <a href="#" onclick="clean()" class="button purple">Очистить</a> 
-<a href="#" onclick="er1()" class="button purple">11111111</a> 
-<a href="#" onclick="er2()" class="button purple">22222222</a> 
+<a href="#" onclick="er1()" class="button purple">  4.16</a> 
+<a href="#" onclick="er2()" class="button purple">  4.17</a>
 <br> 
 <canvas width='640' height='480' id='example'>Обновите браузер</canvas> 
 <br> 
