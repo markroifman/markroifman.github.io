@@ -51,52 +51,72 @@
       var y1 = Number(document.getElementById("y_znach").value);
       var x2 = Number(document.getElementById("a_znach").value);
       var y2 = Number(document.getElementById("b_znach").value);
-      var x3 = Number(document.getElementById("x_znach").value);
-      var y3 = Number(document.getElementById("y_znach").value);
-      var x4 = Number(document.getElementById("a_znach").value);
-      var y4 = Number(document.getElementById("b_znach").value);
+      var x3 = Number(document.getElementById("c_znach").value);
+      var y3 = Number(document.getElementById("d_znach").value);
+      var x4 = Number(document.getElementById("z_znach").value);
+      var y4 = Number(document.getElementById("q_znach").value);
       var canvas = document.getElementById('example');
       var ctx = canvas.getContext("2d");
-      var x1 = 320 + x1*10
-      var y1 = 240 - y1*10
-      var x2 = 320 + x2*10
-      var y2 = 240 - y2*!0
-      var x3 = 320 + x3*10
-      var y3 = 240 - y3*10
-      var x4 = 320 + x4*10
-      var y4 = 240 - y4*10
+      var x1 = 320 + x1 * 10
+      var y1 = 240 - y1 * 10
+      var x2 = 320 + x2 * 10
+      var y2 = 240 - y2 * 10
+      var x3 = 320 + x3 * 10
+      var y3 = 240 - y3 * 10
+      var x4 = 320 + x4 * 10
+      var y4 = 240 - y4 * 10
       ctx.beginPath();
       ctx.moveTo(320, 0);
       ctx.lineTo(320, 480);
       ctx.moveTo(0, 240);
       ctx.lineTo(640, 240);
-      ctx.strokeRect(x1, y1, x2-x1, y2-y1)
-      ctx.strokeRect(x3, y3, x4-x3, y4-y3)
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y1);
+      ctx.lineTo(x2, y2);
+      ctx.lineTo(x1, y2);
+      ctx.lineTo(x1, y1);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x3, y3);
+      ctx.lineTo(x4, y3);
+      ctx.lineTo(x4, y4);
+      ctx.lineTo(x3, y4);
+      ctx.lineTo(x3, y3);
+      ctx.stroke();
+      x1 = Number(document.getElementById("x_znach").value);
+      y1 = Number(document.getElementById("y_znach").value);
+      x2 = Number(document.getElementById("a_znach").value);
+      y2 = Number(document.getElementById("b_znach").value);
+      x3 = Number(document.getElementById("c_znach").value);
+      y3 = Number(document.getElementById("d_znach").value);
+      x4 = Number(document.getElementById("z_znach").value);
+      y4 = Number(document.getElementById("q_znach").value);
       if (x1 > x3) {
-        xmin = x3
+        xmin = 320 + x3 * 10
       } else {
-        xmin = x1
+        xmin = 320 + x1 * 10
       }
-    if (y1 > y3) {
-      yin = y3
-    } else {
-      ymin = y1
-    }
-    if (x2 > x4) {
-      xmax = x2
-    } else {
-      xmax = x4
-    }
-    if (y2 > y4) {
-      ymax = y2
-    } else {
-      ymax = y4
-    }
-   
-    ctx.beginPath();
-    ctx.strokeRect(xmin, ymin, xmax-xmin, ymax-ymin)
-          ctx.stroke();
+      if (y1 > y3) {
+        ymin = 240 - y3 * 10
+      } else {
+        ymin = 240 - y1 * 10
+      }
+      if (x2 > x4) {
+        xmax = 320 + x2 * 10
+      } else {
+        xmax = 320 + x4 * 10
+      }
+      if (y2 > y4) {
+        ymax = 240 - y2 * 10
+      } else {
+        ymax = 240 - y4 * 10
+      }
 
+      ctx.beginPath();
+      ctx.strokeRect(xmin, ymin, xmax - xmin, ymax - ymin)
+      ctx.stroke();
     }
   </script>
 </head>
@@ -104,14 +124,16 @@
 <body>
   x1=
   <input type="text" value="1" id="x_znach"> y1=
-  <input type="text" value="2" id="y_znach"> x2=
+  <input type="text" value="2" id="y_znach">
+  <br> x2=
   <input type="text" value="3" id="a_znach"> y2=
   <input type="text" value="4" id="b_znach">
   <br> x3=
-  <input type="text" value="5" id="z_znach"> y3=
-  <input type="text" value="6" id="q_znach"> x4=
-  <input type="text" value="7" id="c_znach"> y4=
-  <input type="text" value="8" id="d_znach">
+  <input type="text" value="5" id="c_znach"> y3=
+  <input type="text" value="6" id="d_znach">
+  <br> x4=
+  <input type="text" value="7" id="z_znach"> y4=
+  <input type="text" value="8" id="q_znach">
   <a href="#" onclick="clean()" class="button purple">Очистить</a>
   <a href="#" onclick="er1()" class="button purple">  4.18  </a>
 
