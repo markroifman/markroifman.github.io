@@ -1,34 +1,30 @@
 <html>
 
-<head>
-  <link rel="stylesheet" href="style1.css">
-  
-  <script src="script1.js">
+<head> 
+<link rel="stylesheet" href="style1.css">
+<script>
     function func1() {
       n = Number(document.getElementById("n_f1_znach").value);
       var i = 20;
       while (i < 35) {
-        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML  + i + "<br> ";
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML  + i + "<br>";
         i++ ;
       }
     }
-
     function func2() {
       n = Number(document.getElementById("n_f2_znach").value);
       var i = 10;
       do {
-        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML +i*i+ "<br> ";
+        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML +i*i+ "<br>";
         i++;
       } while (i < n);
     }
-
     function func3() {
       n = Number(document.getElementById("n_f3_znach").value);
       var n;
       for ( n = n; n < 50; n++) {
-        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + n*n*n + "<br> ";
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + n*n*n + "<br>";
       }
-
     }
   </script>
 </head>
