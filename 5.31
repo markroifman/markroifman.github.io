@@ -1,0 +1,28 @@
+<html>
+
+<head> 
+<link rel="stylesheet" href="style1.css">
+<script>
+    function func1() {
+      n = Number(document.getElementById("n_f1_znach").value);
+      i=n;
+      var S=0;
+      while (i <= 2*n) {
+        S=S+i*i;
+    
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i+" "+S+"<br>";
+        i++ ;""
+      }
+    }
+    </script>
+</head>
+
+<body>
+
+
+  <h1>5.31</h1> n=
+  <input type="text" value="10" id="n_f1_znach">
+  <a href="#" onclick="func1()" class="circ-button">I</a>
+  <div id="otvet1"></div>
+  </body>
+</html>
