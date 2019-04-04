@@ -1,0 +1,94 @@
+<html>
+
+<head> 
+<link rel="stylesheet" href="style1.css">
+<script>
+    function func1() {
+      a = Number(document.getElementById("n_f1_znach").value);
+       b = Number(document.getElementById("n_f2_znach").value);
+      var i = a;
+      var S=0;
+      while (i < b) {
+        S=S+i;
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML  + i +" "+ S+"<br>";
+        i++ ;
+      }
+    }
+    function func2() {
+      a = Number(document.getElementById("n_f3_znach").value);
+       b = Number(document.getElementById("n_f4_znach").value);
+      var i = a;
+      var S=1
+       while (i < b) {
+        S=S*i;
+        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML  + i +" "+ S+"<br>";
+        i++ ;
+       }
+    }
+    function func3() {
+      a = Number(document.getElementById("n_f5_znach").value);
+      b = Number(document.getElementById("n_f6_znach").value);
+      var i=a;
+      var c=0
+      var S=0;
+      while (i < b) {
+        c++; 
+        S=S+i;
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML  + i +" "+ S +"<br>";
+        i++ ;   }
+         document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML  + S/c-- +"<br>";
+        
+      }
+      function func4() {
+      a = Number(document.getElementById("n_f7_znach").value);
+      b = Number(document.getElementById("n_f8_znach").value);
+      var i=a;
+     var S=0
+     
+      while (i < b) {
+     
+        S=S+i*i;
+        document.getElementById("otvet4").innerHTML = document.getElementById("otvet4").innerHTML  + i*i +" "+ S +"<br>";
+        i++ ;   }
+      }
+    
+  </script>
+</head>
+
+<body>
+
+
+  <h1>5.27</h1> a=
+  <input type="text" value="10" id="n_f1_znach"> b=
+  <input type="text" value="20" id="n_f2_znach">
+  <a href="#" onclick="func1()" class="circ-button">I</a>
+  <div id="otvet1"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>5.28</h1> a=
+  <input type="text" value="10" id="n_f3_znach">b=
+  <input type="text" value="20" id="n_f4_znach">
+  <a href="#" onclick="func2()" class="circ-button">II</a>
+  <div id="otvet2"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>5.29</h1> a=
+  <input type="text" value="10" id="n_f5_znach">b=
+  <input type="text" value="20" id="n_f6_znach">
+  <a href="#" onclick="func3()"  class="circ-button">III</a>
+  <div id="otvet3"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>5.30</h1> a=
+  <input type="text" value="10" id="n_f7_znach">b=
+  <input type="text" value="20" id="n_f8_znach">
+  <a href="#" onclick="func4()"  class="circ-button">III</a>
+  <div id="otvet4"></div>
+</body>
+</html>
