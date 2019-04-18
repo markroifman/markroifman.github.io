@@ -1,0 +1,91 @@
+html>
+
+<head> 
+<link rel="stylesheet" href="style1.css">
+<script>
+
+var c=0
+ var S=0
+   function func1() {
+   do {
+var n = prompt('Сколько вам лет?', 100);
+S=S+n
+c++ ;
+} while (n >0)
+document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML+n + " " + S + " " + c + "<br>";
+  }
+     
+    
+    
+    
+    
+     function func2() {
+      n = Number(document.getElementById("n_f2_znach").value);
+      var i = n;
+      var S = 0;
+      var c = 0
+      do {
+         S =S+i ; 
+         c++ ;
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i + " " + S + "<br> ";
+       i--; 
+       
+      } while (i > -1);
+      document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML  + S/c-- +"<br>";
+    }
+
+    function func3() {
+      n = Number(document.getElementById("n_f3_znach").value);
+      var i = 0;
+      do {
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i +  "<br> ";
+       i++; 
+       
+      } while (i <= n);
+    }  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    function func4() {
+      n = Number(document.getElementById("n_f4_znach").value);
+      var i = 0;
+      do {
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i +  "<br> ";
+       i++; 
+       
+      } while (i >= n);
+    }  
+    
+    </script>
+</head>
+
+<body>
+
+
+  <h1></h1> 6.1
+  <input type="text" value="10" id="n_f1_znach">
+  <a href="#" onclick="func1()" class="circ-button">I</a>6.2
+  <input type="text" value="10" id="n_f2_znach">
+  <a href="#" onclick="func2()" class="circ-button">II</a><br> 6.8
+  <input type="text" value="" id="n_f3_znach">
+  <a href="#" onclick="func3()" class="circ-button">III</a>6.9
+  <input type="text" value="" id="n_f4_znach">
+  <a href="#" onclick="func4()" class="circ-button">IV</a>
+  <div id="otvet1"></div>
+  </body>
+</html>
