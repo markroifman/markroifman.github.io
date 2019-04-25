@@ -32,14 +32,14 @@ document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").
 S=S+n;
 
 }  while (n>=0)
-      document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML  + (S-n)/(c-1) +"<br>";
+      document.getElementById("otvet2").innerHTML = document.getElementById("otvet1").innerHTML  + (S-n)/(c-1) +"<br>";
     }
 
     function func3() {
       n = Number(document.getElementById("n_f3_znach").value);
       var i = 0;
       do {
-        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i +  "<br> ";
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet1").innerHTML + i*i +  "<br> ";
        i++; 
        
       } while (i*i <= n);
@@ -52,7 +52,7 @@ S=S+n;
        i++; 
        
       } while (i*i <= n);
-    document.getElementById("otvet1").innerHTML=i*i
+    document.getElementById("otvet4").innerHTML=i*i
     }
     
     </script>
@@ -63,13 +63,19 @@ S=S+n;
 
   <h1></h1> 6.1
   <input type="text" value="НАЖМИ" id="n_f1_znach">
-  <a href="#" onclick="func1()" class="circ-button">I</a>6.2
+  <a href="#" onclick="func1()" class="circ-button">I</a>
+   <div id="otvet1"></div>
+   6.2
   <input type="text" value="ТУТ ТОЖЕ" id="n_f2_znach">
-  <a href="#" onclick="func2()" class="circ-button">II</a><br> 6.8
+  <a href="#" onclick="func2()" class="circ-button">II</a><br>
+   <div id="otvet2"></div>
+   6.8
   <input type="text" value="" id="n_f3_znach">
-  <a href="#" onclick="func3()" class="circ-button">III</a>6.9
+  <a href="#" onclick="func3()" class="circ-button">III</a>
+   <div id="otvet3"></div>
+   6.9
   <input type="text" value="" id="n_f4_znach">
   <a href="#" onclick="func4()" class="circ-button">IV</a>
-  <div id="otvet1"></div>
+  <div id="otvet4"></div>
   </body>
 </html>
