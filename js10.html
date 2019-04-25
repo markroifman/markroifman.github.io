@@ -32,14 +32,14 @@ document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").
 S=S+n;
 
 }  while (n>=0)
-      document.getElementById("otvet2").innerHTML = document.getElementById("otvet1").innerHTML  + (S-n)/(c-1) +"<br>";
+      document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML  + (S-n)/(c-1) +"<br>";
     }
 
     function func3() {
       n = Number(document.getElementById("n_f3_znach").value);
       var i = 0;
       do {
-        document.getElementById("otvet3").innerHTML = document.getElementById("otvet1").innerHTML + i*i +  "<br> ";
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + i*i +  "<br> ";
        i++; 
        
       } while (i*i <= n);
@@ -48,7 +48,7 @@ S=S+n;
       n = Number(document.getElementById("n_f4_znach").value);
       var i = 0;
       do {
-        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i +  "<br> ";
+        document.getElementById("otvet4").innerHTML = document.getElementById("otvet4").innerHTML + i*i +  "<br> ";
        i++; 
        
       } while (i*i <= n);
